@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import CharityForm from "./components/CharityForm/CharityForm";
 
 function App() {
-  return (
-    <>
 
-    </>
+
+  return (
+    <div className="app">
+        <CharityForm/>
+    </div>
   );
 }
 
