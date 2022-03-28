@@ -8,10 +8,10 @@ export const schema =  Yup.object().shape({
     company: Yup.string()
         .required('Required'),
     email: Yup.string()
-        .email()
+        .email("Not an email")
         .required('Required'),
     phone: Yup.string()
-        .matches(/^\+?[0-9]{3}-?[0-9]{6,12}$/)
+        .matches(/^\+?[0-9]{3}-?[0-9]{6,12}$/, 'Not a phone number')
         .required('Required'),
     country: Yup.string()
         .required('Required'),
