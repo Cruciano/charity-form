@@ -21,6 +21,8 @@ const fields: Array<InputFieldProps> = [
 const CharityForm: FC = () => {
     const initValues = fields.reduce((acc: object, field: InputFieldProps) => ({...acc, [field.value]: ''}), {});
     initValues["logo"] = '';
+    initValues["creditCard"] = '';
+
     type values = typeof initValues;
 
     const handleSubmit = (values: values, actions: FormikHelpers<values>) => {
