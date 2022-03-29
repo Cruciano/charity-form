@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fakeTitle {
+    height: 1.7em;
+    width: 200px;
+    background-color: #CCC;
+}
+
+.fakeText {
+    margin-top: 1em;
+    height: 1.2em;
+    width: 400px;
+    background-color: #CCC;
+}
+
+.fakeBlock {
+    height: 180px;
+    width: 300px;
+    background-color: #CCC;
+}

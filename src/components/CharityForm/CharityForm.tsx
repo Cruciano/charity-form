@@ -18,12 +18,13 @@ const fields: Array<InputFieldProps> = [
     {value: "zipCode", name: "Поштовий індекс", style: {gridColumn: 4}},
 ]
 
-export const CardContext = createContext((field: string, value: any) => { });
+export const FormContext = createContext((field: string, value: any) => { });
 
 const CharityForm: FC = () => {
     const initValues = fields.reduce((acc: object, field: InputFieldProps) => ({...acc, [field.value]: ''}), {});
     initValues["logo"] = '';
     initValues["creditCard"] = '';
+    initValues["method"] = '';
 
     type values = typeof initValues;
 
@@ -61,9 +62,9 @@ const CharityForm: FC = () => {
                     </div>
                     <h1>Види допомоги</h1>
                     <h3>Ви можете змінити вид допомоги</h3>
-                    <CardContext.Provider value={formik.setFieldValue}>
+                    <FormContext.Provider value={formik.setFieldValue}>
                         <TabBlock/>
-                    </CardContext.Provider>
+                    </FormContext.Provider>
                     <button className={styles.submit} type="submit">Допомогти</button>
                 </Form>
             )}

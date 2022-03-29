@@ -1,9 +1,9 @@
 import React, {FC, useContext, useEffect, useState} from 'react';
 import styles from "./CreditCardForm.module.css";
-import {CardContext} from "../CharityForm/CharityForm";
+import {FormContext} from "../CharityForm/CharityForm";
 
 const CreditCardForm: FC = () => {
-    const setField = useContext(CardContext);
+    const setField = useContext(FormContext);
 
     const [tetrad1, setTetrad1] = useState<string>('');
     const [tetrad2, setTetrad2] = useState<string>('');
