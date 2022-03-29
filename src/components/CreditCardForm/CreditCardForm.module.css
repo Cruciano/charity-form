@@ -1,5 +1,31 @@
 .card {
-    width: 300px;
-    height: 200px;
-    background-color: #9ca2aa;
+    width: 318px;
+    height: 146px;
+    background-color: #c5d5e6;
+    padding: 20px 25px;
+    border-radius: 15px;
+    font-size: 10px;
+}
+
+.card label {
+    color: #f3f7fa;
+}
+
+.numberInput {
+    display: inline-block;
+    width: 72px;
+}
+
+.numberInput:not(:first-of-type) {
+    margin-left: 10px;
+}
+
+.card .infoInput {
+    display: inline-block;
+    margin-top: 30px;
+    width: 130px;
+}
+
+.card .infoInput:last-of-type {
+    float: right;
 }

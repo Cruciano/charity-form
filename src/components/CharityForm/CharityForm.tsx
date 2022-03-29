@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {createContext, FC} from 'react';
 import {Form, Formik, FormikHelpers} from 'formik';
 import {schema} from "./validationSchema";
 import InputField, {InputFieldProps} from "./InputField";
@@ -17,6 +17,8 @@ const fields: Array<InputFieldProps> = [
     {value: "address", name: "Адреса", style: {gridColumnStart: 4, gridColumnEnd: 6}},
     {value: "zipCode", name: "Поштовий індекс", style: {gridColumn: 4}},
 ]
+
+export const CardContext = createContext((field: string, value: any) => { });
 
 const CharityForm: FC = () => {
     const initValues = fields.reduce((acc: object, field: InputFieldProps) => ({...acc, [field.value]: ''}), {});
@@ -59,7 +61,9 @@ const CharityForm: FC = () => {
                     </div>
                     <h1>Види допомоги</h1>
                     <h3>Ви можете змінити вид допомоги</h3>
-                    <TabBlock/>
+                    <CardContext.Provider value={formik.setFieldValue}>
+                        <TabBlock/>
+                    </CardContext.Provider>
                     <button className={styles.submit} type="submit">Допомогти</button>
                 </Form>
             )}
