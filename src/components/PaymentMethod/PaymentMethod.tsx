@@ -26,8 +26,10 @@ const PaymentMethod: FC = () => {
                         setField("method", paymentMethod.card)
                     }}
                 >
-                    <img src={mastercard} alt="mastercard"/>
-                    <img src={visa} alt="visa"/>
+                    <div className={styles.imgGroup}>
+                        <img height="32" src={mastercard} alt="mastercard"/>
+                        <img height="32" src={visa} alt="visa"/>
+                    </div>
                     <p>Карта Visa/Mastercard</p>
                 </div>
                 <div
@@ -37,7 +39,9 @@ const PaymentMethod: FC = () => {
                         setField("method", paymentMethod.privat24)
                     }}
                 >
-                    <img src={privat24} alt="privat24"/>
+                    <div className={styles.imgGroup}>
+                        <img height="32" src={privat24} alt="privat24"/>
+                    </div>
                     <p>Приват24</p>
                 </div>
                 <div
@@ -47,7 +51,9 @@ const PaymentMethod: FC = () => {
                         setField("method", paymentMethod.terminal)
                     }}
                 >
-                    <img src={terminal} alt="terminal"/>
+                    <div className={styles.imgGroup}>
+                        <img height="32" src={terminal} alt="terminal"/>
+                    </div>
                     <p>Термінали України</p>
                 </div>
                 <div
@@ -57,7 +63,9 @@ const PaymentMethod: FC = () => {
                         setField("method", paymentMethod.webmoney)
                     }}
                 >
-                    <img src={webmoney} alt="webmoney"/>
+                    <div className={styles.imgGroup}>
+                        <img height="32" src={webmoney} alt="webmoney"/>
+                    </div>
                     <p>Webmoney</p>
                 </div>
                 <div
@@ -67,7 +75,9 @@ const PaymentMethod: FC = () => {
                         setField("method", paymentMethod.paypal)
                     }}
                 >
-                    <img src={paypal} alt="paypal"/>
+                    <div className={styles.imgGroup}>
+                        <img height="32" src={paypal} alt="paypal"/>
+                    </div>
                     <p>PayPal</p>
                 </div>
             </div>

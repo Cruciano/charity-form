@@ -3,6 +3,14 @@
     flex-direction: column;
     align-items: center;
 }
+.charityForm h1 {
+    margin-bottom: 10px ;
+}
+
+.charityForm h3 {
+    margin: 0 0 40px 0;
+    font-weight: 300;
+}
 
 .charityFormGrid {
     display: grid;
@@ -38,5 +46,11 @@
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
+    margin-top: 30px;
     cursor: pointer;
+}
+
+.submit:hover {
+    background: rgba(137,106,176,1);
+    box-shadow: 0 0 20px rgba(137,106,176,0.8);
 }
