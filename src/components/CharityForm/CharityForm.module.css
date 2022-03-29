@@ -3,6 +3,23 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (min-width: 1130px) {
+    .charityFormGrid {
+        display: grid;
+        grid-template-columns: 200px 200px 240px 200px 200px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1130px){
+    .charityFormGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 .charityForm h1 {
     margin-bottom: 10px ;
 }
@@ -10,12 +27,6 @@
 .charityForm h3 {
     margin: 0 0 40px 0;
     font-weight: 300;
-}
-
-.charityFormGrid {
-    display: grid;
-    grid-template-columns: 200px 200px 240px 200px 200px;
-    gap: 20px;
 }
 
 .inputLogo {

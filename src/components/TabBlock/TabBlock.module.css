@@ -1,11 +1,27 @@
-.tabBlock {
-    width: 1130px;
-}
 
 .tabContainer {
     display: flex;
     gap: 10px;
-    justify-content: space-between;
+
+}
+
+@media (min-width: 1130px) {
+    .tabContainer {
+        justify-content: space-between;
+    }
+
+    .tabBlock {
+        width: 1130px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .tabContainer {
+        flex-direction: column;
+    }
+    .tabBlock {
+        width: 90%;
+    }
 }
 
 .content {

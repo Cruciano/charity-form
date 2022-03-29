@@ -1,6 +1,19 @@
-.container {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 1130px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1130px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fakeBlock {
+        margin-top: 10px;
+    }
 }
 
 .fakeTitle {

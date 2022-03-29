@@ -1,7 +1,17 @@
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+@media (min-width: 1130px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .method {
